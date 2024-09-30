@@ -28,7 +28,7 @@ resource "aws_eks_node_group" "my_node_group" {
     Environment = "Production"
   }
 }
-{
+
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -39,7 +39,7 @@ resource "aws_eks_node_group" "my_node_group" {
       "Action": "sts:AssumeRole"
     }
   ]
-}
+
 resource "aws_iam_role" "eks_role" {
   name = "anji-role"
   

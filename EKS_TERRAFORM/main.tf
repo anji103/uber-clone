@@ -33,7 +33,6 @@ resource "aws_eks_node_group" "my_node_group" {
 
 resource "aws_iam_role" "eks_role" {
   name = "anji-role"
-  Effect = "Allow"
   Principal = {
   Service = "eks.amazonaws.com"
       }

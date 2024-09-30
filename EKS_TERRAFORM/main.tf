@@ -43,16 +43,16 @@ resource "aws_eks_node_group" "my_node_group" {
 resource "aws_iam_role" "eks_role" {
   name = "anji-role"
   
-  assume_role_policy = jsonencode({
+  assume_role_policy = jsonencode{
     Version = "2012-10-17",
-    Statement = [{
+    Statement = {
       Effect = "Allow",
       Principal = {
         Service = "eks.amazonaws.com"
       },
       Action = "sts:AssumeRole"
-    }]
-  })
+    }
+  }
 }
 
 

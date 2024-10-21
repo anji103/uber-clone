@@ -13,7 +13,7 @@ resource "aws_eks_cluster" "my_cluster" {
 }
 
 resource "aws_eks_node_group" "my_node_group" {
-  cluster_name    = aws_eks_cluster.my_cluster.name
+  cluster_name    = "my_cluster"
   node_group_name = "my-node-group"
   node_role_arn   = "arn:aws:iam::060795910502:role/anji-role"  # Replace with your IAM role ARN
   subnet_ids         = ["subnet-03e6aaed9d64539fe", "subnet-0f73c0829609a5147"]      # Replace with your subnet IDs
